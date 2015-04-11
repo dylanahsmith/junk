@@ -1,0 +1,9 @@
+#!/bin/sh
+
+total=${1:-60}
+
+echo "0/$total"
+for i in `seq "$total"`; do
+  sleep 1
+  echo "$i/$total"
+done

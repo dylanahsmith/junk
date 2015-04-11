@@ -1,0 +1,14 @@
+deploy:
+  override:
+    - exec script/slow_count 30
+
+rollback:
+  override:
+    - exec script/slow_count 10
+
+tasks:
+  restart:
+    action: "Restart Application"
+    description: "Sometimes needed after memcached or the database read slave become unavailable."
+    steps:
+      - exec script/slow_count 20
