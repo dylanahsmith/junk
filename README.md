@@ -1,3 +1,3 @@
 # Testing
 
-Testing shipit
+Repo for shipit test stack.
